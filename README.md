@@ -17,6 +17,14 @@ cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+### If Gives Error like uvicorn not recognized then
+```bash
+#run this in main folder path where hole project cloned
+#change user_name with your device user name
+$Env:PATH += ";C:\Users\User_name\AppData\Roaming\Python\Python313\Scripts"
+#then run this
+uvicorn backend.main:app --reload
+```
 
 ### 2. Run the Frontend
 You can serve the frontend directory with any static file server.
