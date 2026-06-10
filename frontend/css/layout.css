@@ -1,0 +1,82 @@
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Main Grid */
+.main-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr 350px;
+  flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 250px 1fr 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+  }
+}
+
+/* Panels */
+.panel {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.panel-left {
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+}
+
+.panel-center {
+  background-color: var(--bg-primary);
+}
+
+.panel-right {
+  background-color: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.section-title:first-child {
+  margin-top: 0;
+}
